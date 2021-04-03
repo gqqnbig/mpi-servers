@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 
-import tensorflow as tf
+import os
+# disable tensorflow info log
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 
+import tensorflow as tf
 
 print(f'tensorflow version is {tf.__version__}.')
 print()
