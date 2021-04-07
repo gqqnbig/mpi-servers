@@ -26,3 +26,5 @@ function sit
 }
 
 complete -W "--internet -g" sit
+
+alias df-real='df -h -x tmpfs -x devtmpfs -x squashfs'
