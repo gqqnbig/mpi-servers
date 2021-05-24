@@ -5,8 +5,8 @@
 function catchEditSudoers {
 	if ([[ $BUFFER =~ .*sudoers.* ]] && [[ ! $BUFFER =~ .*visudo.* ]] && [[ ! $BUFFER =~ "cd .*" ]]) ||
 		([[ $PWD =~ ".*/sudoers.d" ]] && [[ ! $BUFFER =~ .*visudo.* ]] && [[ ! $BUFFER =~ "cd .*" ]]); then
-		echo
-		read -q "reply?It's recommanded to use visudo to edit sudoers. Continue anyway? (y/n)"
+		zle -R "It's recommanded to use visudo to edit sudoers. Continue anyway? (y/n)"
+		read -k reply
 		if [[ $reply == y ]]; then
 			zle accept-line
 		else
