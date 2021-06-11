@@ -24,5 +24,4 @@
 
 source /opt/anaconda3/bin/activate
 conda activate tf
-TF_CPP_MIN_LOG_LEVEL=2
 ./tf.py
