@@ -2,7 +2,8 @@
 Description=Check and clean conda pkgs cache
 
 [Timer]
-OnActiveSec=2d
+OnStartupSec=10min
+OnUnitActiveSec=2d
 Unit=clean-conda-cache.service
 
 [Install]
