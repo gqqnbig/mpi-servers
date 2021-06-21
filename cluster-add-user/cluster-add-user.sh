@@ -13,6 +13,7 @@ if [[ "$username" == '-t' ]] || [[ "$username" == '--test' ]]; then
 
 	if [[ "$localAptUserId" != "$remoteAptUserId" ]]; then
 		echo "Error: The id of group aptuser is $localAptUserId on local while $remoteAptUserId on remote."
+		exit 1
 	fi
 	exit
 fi
